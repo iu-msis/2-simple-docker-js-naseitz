@@ -41,9 +41,24 @@
   </div>
 </nav>
 
-	<div id="content">
+	<div id="UserInfo">
 
-    <h2>Josiah Harshman</h2>   <img src="img/profile.jpeg" height="260px" width="260px">
+    <a v-bind:href='picturelrg'>
+      <img v-bind:src="picturesml">
+    </a>
+    <h2>Name: {{username}}</h2>
+    <h2>Country of origin: {{country}}</h2>
+    <h2>Date of birth: {{birth}}</h2>
+    <h2>Current age: {{age}}</h2>
+    <h2>Email address: <a v-bind:href=" 'mailto:' + email">{{email}}</a></h2>
+
+
+
+
+
+
+
+    <!-- <h2>Josiah Harshman</h2>   <img src="img/profile.jpeg" height="260px" width="260px">
     <p>Image source: <a class="nav_link" href="https://www.google.com/search?q=boromir&rlz=1C1CHBF_enUS901US901&sxsrf=ALeKk00KOvsT8al9RvXQhE-eJb1qxLMP9Q:1599171755077&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiLl5WDg87rAhUDCM0KHdPBCHEQ_AUoAXoECBkQAw&biw=1920&bih=937#imgrc=q2WWyNRgaFaAmM">Link</a></p>
 
     <h2>Birth location: Gondor</h2>
@@ -52,12 +67,14 @@
 
     <h2>Age: 33 years</h2>
 
-    <!-- <h2>Email: <a id="email" href="mailto:joshgondor@aid.com?subject=feedback">joshgond@aid.com</a></h2> -->
-    <p id="email"style="font-size:18px">E-mail: <a href="mailto:joshgondor@aid.com?subject=feedback">joshgond@aid.com</a></p>
+
+    <p id="email"style="font-size:18px">E-mail: <a href="mailto:joshgondor@aid.com?subject=feedback">joshgond@aid.com</a></p> -->
 
 	</div>
 
 	<!-- Link back to HTML Dog: -->
 	<p><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/user.app.js"></script>
 </body>
 </html>
