@@ -26,11 +26,14 @@ var app = new Vue({
         this.age = userData.dob.age;
         this.picturelrg = userData.picture.large;
         this.picturesml = userData.picture.thumbnail;
-
-
         })
+      },
 
-}
+
+
+
+      
+
 
   }
 
