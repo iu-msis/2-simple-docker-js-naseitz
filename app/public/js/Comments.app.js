@@ -23,7 +23,7 @@ var app = new Vue({
     },
     createComment(){
       //make a line for getting the // ID
-      fetch('api/Comments/create_comment.php',{
+      fetch('api/comments/create_comment.php',{
       method:'POST',
       body: JSON.stringify(this.newComment),
       headers: {
