@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Page layout taken from htmldog, basic table -->
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
+
+	<meta charset="utf-8">
+	<title>Comments</title>
+
+</head>
+<body id="bootstrap-overrides">
+  <header>
+    <h1>Comments</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="table.html">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="user.html">User Info</a>
+      <li class="nav-item">
+        <a class="nav-link" href="Comments.html">Comments</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="row" id="CommentPage">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <div class="Comment" v-for="x in Comment">
+        <span class="id">ID: {{ x.id }}</span>, <br/>
+        <span class="commentText">Comment Text: {{ x.commentText }}</span>
+      </div>
+
+<form v-on:submit.prevent="createComment()">
+  <div class="Comment">
+    <label for="commentText">Enter Comment.</label>
+    <input type="text" v-model="newComment.commentText" class="form-control" id="commentText" placeholder="Comment">
+    <input type="submit" value="Create Comment" class="button">
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</body>
+<script type="JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/Comments.app.js"></script>
+
+</html>
