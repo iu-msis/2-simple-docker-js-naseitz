@@ -43,16 +43,40 @@
 <div class="container-fluid">
   <div class="row" id="CommentPage">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-      <div class="Comment" v-for="x in Comment">
+      <!-- <div class="Comment" v-for="x in Comment">
         <span class="id">ID: {{ x.id }}</span>, <br/>
         <span class="commentText">Comment Text: {{ x.commentText }}</span>
-      </div>
+      </div> -->
 
-<form v-on:submit.prevent="createComment()">
+
+
+
+ <table id="commentTable">
+   <thead>
+ 						<tr>
+ 							<th>ID</th>
+ 							<th>Comment Text</th>
+
+ 						</tr>
+ 					</thead>
+ 					<tbody id="commentTableBody">
+ 						<tr v-for = "x in Comment">
+ 							<th>{{x.id}}</th>
+ 							<th>{{x.commentText}}</th>
+ 						</tr>
+ 					</tbody>
+ 				</table>
+
+ </table>
+
+
+
+<form v-on:submit.prevent="createComment()" id="newCommentForm">
   <div class="Comment">
     <label for="commentText">Enter Comment.</label>
     <input type="text" v-model="newComment.commentText" class="form-control" id="commentText" placeholder="Comment">
-    <input type="submit" value="Create Comment" class="button">
+    <!-- <input type="submit" value="Create Comment" class="button" id="submitNewComment"> -->
+    <button type="submit" class="btn btn-primary" id="submitNewComment">Submit</button>
 </form>
 </div>
 </div>
