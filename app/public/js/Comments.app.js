@@ -2,10 +2,12 @@ var app = new Vue({
   el: '#CommentPage',
   data: {
     Comment: [{
-      commentText: "",
+      id: "",
+      commentText: ""
     }],
     newComment: {
-      commentText: "",
+      id: "",
+      commentText: ""
     }
   },
   created() {
@@ -27,7 +29,7 @@ var app = new Vue({
       method:'POST',
       body: JSON.stringify(this.newComment),
       headers: {
-        "CONTENT_TYPE": "application/json; charset=utf-8"
+        "Content-Type": "application/json; charset=utf-8"
       }}
     )
     .then( response => response.json())
@@ -39,6 +41,12 @@ var app = new Vue({
     console.log("Creating (POSTING)...!");
     console.log(this.newComment);
   },
+  newCommentData() {
+    return {
+      id: "",
+      commentText:""
+    }
+  }
 
 
   }
